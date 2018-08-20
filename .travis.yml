@@ -6,9 +6,11 @@ after_success:
   - bash <(curl -s https://codecov.io/bash) -t 66461f9a-9023-4170-b10c-83afcfc9503f
 
 install:
-  - sudo wget https://github.com/google/protobuf/releases/download/v2.5.0/protobuf-2.5.0.tar.gz
-  - sudo tar -xzvf protobuf-2.5.0.tar.gz
-  - sudo pushd protobuf-2.5.0 && ./configure --prefix=/usr && sudo make && sudo make install && sudo popd
+  - wget https://github.com/google/protobuf/releases/download/v2.5.0/protobuf-2.5.0.tar.gz
+  - tar -xzvf protobuf-2.5.0.tar.gz
+  - pushd protobuf-2.5.0 && ./configure --prefix=/usr && make && sudo make install && popd
 
 before_install:
-  - ./install-protobuf.sh
+  - wget https://github.com/google/protobuf/releases/download/v2.5.0/protobuf-2.5.0.tar.gz
+  - tar -xzvf protobuf-2.5.0.tar.gz
+  - cd protobuf-2.5.0 && ./configure --prefix=/usr && make && sudo make install
