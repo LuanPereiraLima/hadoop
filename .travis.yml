@@ -11,4 +11,4 @@ install:
   - pushd protobuf-2.5.0 && ./configure --prefix=/usr && make && sudo make install && popd
 
 before_install:
-  - ./install-protobuf.sh
+  - sudo ./install-protobuf.sh
