@@ -1,6 +1,2 @@
-language: java
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
-env:
-  global:
-    - CODECOV_TOKEN=:uuid-repo-token
+repo_token: vA4kq5e0zy8uVea599fsf0f4nECYGu3iU
+gem 'coveralls', require: false
